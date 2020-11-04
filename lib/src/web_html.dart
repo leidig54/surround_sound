@@ -99,7 +99,6 @@ String html(String background) {
         if (audioCtx.state === 'suspended') {
             audioCtx.resume();
         }
-
         return '';
     }
 
@@ -108,6 +107,8 @@ String html(String background) {
             volumeController.connect(audioCtx.destination);
             started = true;
         }
+        return '';
+
     }
 
     function stop() {
@@ -115,6 +116,8 @@ String html(String background) {
             volumeController.disconnect(audioCtx.destination);
             started = false;
         }
+        return '';
+
     }
 
     function set_panner(x, y, z) {
@@ -122,16 +125,22 @@ String html(String background) {
         yPos = y;
         zPos = z;
         _setPanner();
+        return '';
+
     }
 
     function set_freq(f) {
         freq = f;
         oscillator.frequency.value = freq;
+        return '';
+
     }
 
     function set_volume(v) {
         vol = v;
         volumeController.gain.value = vol;
+        return '';
+
     }
 
 </script>
