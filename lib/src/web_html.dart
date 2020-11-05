@@ -99,7 +99,6 @@ String html(String background) {
         if (audioCtx.state === 'suspended') {
             audioCtx.resume();
         }
-        return '';
     }
 
     function play() {
