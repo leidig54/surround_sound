@@ -28,7 +28,7 @@ class SoundController extends ValueNotifier<AudioParam> {
 
   Future init() async {
     _controller = await _webController.future;
-    // await _controller.evaluateJavascript('init_sound()');
+    await _controller.evaluateJavascript('init_sound()');
   }
 
   Future _check() async {
